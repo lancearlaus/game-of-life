@@ -58,9 +58,9 @@ object Main extends App {
     }.toSet
   }
 
-  def printState(state: State, bounds: Bounds, live: Char = '#') = {
-    for (x <- 0 until bounds.width) {
-      for (y <- 0 until bounds.height) {
+  def printState(state: State, bounds: Bounds, live: Char = 'X') = {
+    for (y <- 0 until bounds.height) {
+      for (x <- 0 until bounds.width) {
         val c = if (state.contains((x, y))) live else ' '
         print(c)
       }
